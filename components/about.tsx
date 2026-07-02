@@ -3,15 +3,15 @@
 import { motion } from "motion/react"
 import { CheckCircle2 } from "lucide-react"
 import { SectionHeading } from "@/components/section-heading"
-import { aboutPoints, stats } from "@/lib/data"
+import { aboutPoints, profile, stats } from "@/lib/data"
 
 export function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <SectionHeading
         eyebrow="Tentang Saya"
-        title="Mengajar dengan Sentuhan Teknologi"
-        description="Memadukan pedagogi dan kecerdasan buatan untuk pembelajaran yang lebih hidup."
+        title={profile.role}
+        description={profile.tagline}
       />
 
       <div className="grid items-start gap-10 lg:grid-cols-2">
@@ -24,9 +24,7 @@ export function About() {
           className="rounded-3xl bg-card p-8 shadow-sm ring-1 ring-border"
         >
           <p className="mb-6 leading-relaxed text-muted-foreground">
-            Sebagai Guru Informatika MTs, saya percaya teknologi mampu membuat belajar terasa menyenangkan. Saya
-            mengembangkan beragam media pembelajaran digital dan memanfaatkan AI untuk membantu peserta didik memahami
-            materi dengan cara yang lebih interaktif.
+            {profile.aboutDescription}
           </p>
           <ul className="grid gap-3 sm:grid-cols-2">
             {aboutPoints.map((point) => (
@@ -56,6 +54,7 @@ export function About() {
                 {stat.suffix}
               </span>
               <span className="mt-2 text-sm font-semibold text-accent-foreground">{stat.label}</span>
+              <span className="mt-2 text-sm leading-relaxed text-muted-foreground">{stat.description}</span>
             </div>
           ))}
         </motion.div>

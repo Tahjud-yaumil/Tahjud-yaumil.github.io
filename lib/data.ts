@@ -5,9 +5,11 @@
 
 export const profile = {
   name: "Nur Tahjud Yaumil, S.Pd",
-  role: "Pendidik AI • Guru Informatika MTs • Pencipta Pembelajaran Digital",
+  role: "Menghubungkan Pendidikan dengan Teknologi",
   tagline:
-    "Saya menggabungkan dunia pendidikan dengan kecerdasan buatan — membangun media pembelajaran digital yang interaktif, menyenangkan, dan bermakna bagi peserta didik.",
+    "Menggabungkan pedagogi, teknologi, dan kecerdasan buatan untuk menghadirkan pengalaman belajar yang modern, interaktif, dan berpusat pada peserta didik.",
+  aboutDescription:
+    "Sebagai pendidik sekaligus pengembang media pembelajaran digital, saya percaya bahwa teknologi bukan sekadar alat, tetapi jembatan untuk menciptakan pengalaman belajar yang lebih efektif, kreatif, dan menyenangkan. Melalui pemanfaatan Artificial Intelligence, desain pembelajaran modern, serta berbagai platform digital, saya berupaya membantu guru dan peserta didik menghadapi tantangan pendidikan di era transformasi digital.",
   photo: "/profile.png",
   location: "Indonesia",
   email: "nurtahjud@example.com",
@@ -31,21 +33,41 @@ export const navLinks = [
 
 // --- Tentang Saya ---
 export const aboutPoints = [
-  "Guru Informatika di tingkat MTs.",
-  "Berpengalaman membuat media pembelajaran digital.",
-  "Mengembangkan Flipbook interaktif.",
-  "Mendesain Canva Website untuk pembelajaran.",
-  "Membuat LKPD digital yang menarik.",
-  "Menyusun Modul Ajar Kurikulum Merdeka.",
-  "Mengintegrasikan AI dalam proses pembelajaran.",
-  "Menguasai ChatGPT, Canva AI, Gemini, Claude, dan tools AI lainnya.",
+  "Mengembangkan media pembelajaran digital interaktif.",
+  "Merancang aplikasi generator modul ajar berbasis Kurikulum Merdeka.",
+  "Mengintegrasikan Artificial Intelligence dalam proses pembelajaran.",
+  "Mendesain Canva Website, Flipbook, dan LMS sederhana.",
+  "Membangun konten edukasi visual untuk guru dan peserta didik.",
+  "Mengembangkan berbagai tools pendidikan berbasis AI.",
+  "Mengoptimalkan produktivitas guru melalui teknologi digital.",
+  "Berorientasi pada pembelajaran kreatif, adaptif, dan berkelanjutan.",
 ]
 
 export const stats = [
-  { label: "Media Pembelajaran", value: 48, suffix: "+" },
-  { label: "Modul Ajar", value: 24, suffix: "+" },
-  { label: "Desain Canva", value: 120, suffix: "+" },
-  { label: "Proyek AI", value: 30, suffix: "+" },
+  {
+    value: 48,
+    suffix: "+",
+    label: "Media Digital",
+    description: "Mencakup LKPD, infografis, video, dan media interaktif.",
+  },
+  {
+    value: 24,
+    suffix: "+",
+    label: "Modul Pembelajaran",
+    description: "Berbasis Kurikulum Merdeka dan pembelajaran aktif.",
+  },
+  {
+    value: 120,
+    suffix: "+",
+    label: "Desain Edukasi",
+    description: "Canva, flayer, presentasi, poster, banner, hingga website pembelajaran.",
+  },
+  {
+    value: 30,
+    suffix: "+",
+    label: "Solusi AI Edukasi",
+    description: "Prompt engineering, automasi, generator materi, dan AI assistant.",
+  },
 ]
 
 // --- Keahlian (progress bar) ---
@@ -63,8 +85,9 @@ export const skillGroups = [
     category: "Desain",
     skills: [
       { name: "Canva", level: 96 },
-      { name: "Canva AI", level: 90 },
+      { name: "Corel", level: 84 },
       { name: "Figma", level: 75 },
+      { name: "Affinity", level: 78 },
     ],
   },
   {
@@ -82,6 +105,7 @@ export const skillGroups = [
       { name: "Word", level: 95 },
       { name: "Excel", level: 88 },
       { name: "PowerPoint", level: 92 },
+      { name: "PDF", level: 86 },
     ],
   },
 ]

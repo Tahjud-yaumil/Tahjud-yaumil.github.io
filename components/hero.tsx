@@ -59,23 +59,23 @@ export function Hero() {
       const offsetY = current.y * 120
 
       if (dayLayerRef.current) {
-        dayLayerRef.current.style.transform = `translate3d(${offsetX * 0.02}px, ${offsetY * 0.02}px, 0) scale(1.06)`
+        dayLayerRef.current.style.transform = `translate3d(${offsetX * 0.02}px, ${offsetY * 0.02}px, 0) scale(1.05)`
       }
 
       if (nightLayerRef.current) {
-        nightLayerRef.current.style.transform = `translate3d(${offsetX * 0.04}px, ${offsetY * 0.04}px, 0) scale(1.08)`
+        nightLayerRef.current.style.transform = `translate3d(${offsetX * 0.035}px, ${offsetY * 0.035}px, 0) scale(1.07)`
       }
 
       if (starFarRef.current) {
-        starFarRef.current.style.transform = `translate3d(${offsetX * 0.06}px, ${offsetY * 0.06}px, 0)`
+        starFarRef.current.style.transform = `translate3d(${offsetX * 0.05}px, ${offsetY * 0.05}px, 0)`
       }
 
       if (starNearRef.current) {
-        starNearRef.current.style.transform = `translate3d(${offsetX * -0.08}px, ${offsetY * -0.08}px, 0)`
+        starNearRef.current.style.transform = `translate3d(${offsetX * -0.06}px, ${offsetY * -0.06}px, 0)`
       }
 
       if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(${offsetX * -0.05}px, ${offsetY * -0.05}px, 0) scale(1.02)`
+        glowRef.current.style.transform = `translate3d(${offsetX * -0.04}px, ${offsetY * -0.04}px, 0) scale(1.02)`
       }
 
       if (photoTiltRef.current) {
@@ -263,15 +263,25 @@ export function Hero() {
             transition={{ duration: .7 }}
             className="hidden justify-center lg:flex -translate-y-10"
           >
-            <div className="[perspective:1200px]">
-              <div ref={photoTiltRef} className="transform-gpu will-change-transform">
-                <img
-                  src={profile.photo}
-                  alt={profile.name}
-                  className="max-h-[580px] w-auto drop-shadow-2xl"
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 4.8, ease: "easeInOut", repeat: Infinity }}
+              className="[perspective:1200px]"
+            >
+              <div className="relative">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-x-10 bottom-3 -z-10 h-24 rounded-full bg-black/45 blur-3xl"
                 />
+                <div ref={photoTiltRef} className="transform-gpu will-change-transform">
+                  <img
+                    src={profile.photo}
+                    alt={profile.name}
+                    className="max-h-[580px] w-auto drop-shadow-[0_30px_45px_rgba(0,0,0,0.45)]"
+                  />
+                </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* TEXT */}
